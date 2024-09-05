@@ -15,7 +15,7 @@ const ImageSelector = ({navigation}) => {
   const [triggerPostImage, result] = usePostProfileImageMutation();
   const { localId } = useSelector((state) => state.auth.value);
   const { data: imageFromBase } = useGetProfileimageQuery(localId);
-  //console.log(localId)
+
 
 
       const pickLibraryImage = async () => {
@@ -69,7 +69,7 @@ const ImageSelector = ({navigation}) => {
         quality: 0.2,
       });
 
-      //console.log(result);
+
 
       if (!result.canceled) {
         setImage(`data:image/jpeg;base64,${result.assets[0].base64}`);

@@ -61,7 +61,7 @@ const Signup = ({ navigation }) => {
     }
   }
 
-  //console.log(result)
+
 
   return (
     <View style={styles.main}>

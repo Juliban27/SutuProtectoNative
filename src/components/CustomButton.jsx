@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     buttonImage: {
-        width: 20,   // Tamaño de la imagen
+        width: 20, 
         height: 20,
     },
 });

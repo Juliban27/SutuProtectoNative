@@ -5,14 +5,14 @@ import AddButton from '../components/AddButton'
 import { useDispatch, useSelector } from "react-redux";
 import { useGetProfileimageQuery } from '../services/shopServices'
 import { clearUser } from '../features/User/UserSlice';
-//import { truncateSessionsTable } from "../persistence";
+
 import { useDB } from '../hooks/useDB'; 
 import {CustomButton} from "../components/CustomButton"
 
 const MyProfile = ({navigation}) => {
 
       const dispatch = useDispatch()
-      const { truncateSessionTable } = useDB() // preparo el metodo
+      const { truncateSessionTable } = useDB() 
       const {imageCamera, localId} = useSelector((state) => state.auth.value)
       const {data: imageFromBase} = useGetProfileimageQuery(localId)
       const launchCamera = async () => {
@@ -27,7 +27,7 @@ const MyProfile = ({navigation}) => {
 
       const signOut =  async () => {
         try {         
-          if (Platform.OS !== "web") await truncateSessionsTable(); // borro la session
+          if (Platform.OS !== "web") await truncateSessionsTable();
           dispatch(clearUser());
         } catch (error) {
           console.log({ errorSignOutDB: error });

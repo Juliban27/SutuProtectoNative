@@ -30,7 +30,7 @@ const CategoryItem = ({ category, navigation, index }) => {
     <Card style={styles.cardContainer}>
       <Pressable onPress={handleNavigate} style={styles.pressable}>
         <Image 
-          source={logos[index]}  // Selecciona el logo correspondiente por el índice
+          source={logos[index]}  
           style={styles.logo} 
           resizeMode="contain" 
         />

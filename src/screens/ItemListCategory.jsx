@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 
 import { colors } from "../global/colors";
 
-//import products from "../data/products.json";
 import Search from "../components/Search";
 import ProductItem from "../components/ProductItem.jsx";
 import { useGetProductsByCategoryQuery } from "../services/shopServices.js";

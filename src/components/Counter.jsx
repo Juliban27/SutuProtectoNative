@@ -14,7 +14,7 @@ const Counter = () => {
 
   const [inputToAdd, setInputToAdd] = useState(null);
   
-  //let count = 0
+ 
 
   console.log(count);
 

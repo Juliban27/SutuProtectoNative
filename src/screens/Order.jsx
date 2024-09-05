@@ -13,14 +13,14 @@ const Order = () => {
     return <Text>No orders found.</Text>;
   }
 
-  // Verifica los datos que estás recibiendo
+
   console.log(OrderData);
 
   return (
     <View>
       <FlatList
         data={OrderData}
-        keyExtractor={(orderItem) => orderItem.id} // Usamos el 'id' generado en Firebase como key
+        keyExtractor={(orderItem) => orderItem.id}
         renderItem={({ item }) => <OrderItem order={item} />}
       />
     </View>

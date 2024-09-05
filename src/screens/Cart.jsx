@@ -12,16 +12,16 @@ const Cart = () => {
   const onConfirmOrder = async () => {
     const order = {
       items: CartData,
-      user: "mail@mail.com", // Aquí podrías cambiar a un email dinámico si es necesario
+      user: "mail@mail.com", 
       total,
-      createdAt: new Date().toISOString(), // Asegúrate de que este campo exista
+      createdAt: new Date().toISOString(), 
     };
   
     try {
       const result = await triggerPostOrder(order);
-      // Verificamos la respuesta y guardamos el 'key' de Firebase
+ 
       if (result.data) {
-        const orderWithId = { ...order, id: result.data.name }; // result.data.name es el 'key' de Firebase
+        const orderWithId = { ...order, id: result.data.name };
         dispatch(addOrder(orderWithId));
         alert("Orden confirmada!");
       } else {
